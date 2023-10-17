@@ -1,1 +1,44 @@
+The algorithm for this robot can be summarized as follows:
 
+1. Include necessary libraries and define global variables:
+      - Include the VarSpeedServo library.
+      - Declare VarSpeedServo objects for the various servo motors.
+      - Declare variables for ultrasonic sensor pins and distance measurement.
+
+2. In the setup function:
+      - Initialize the serial communication.
+      - Attach each servo motor to its corresponding pin.
+      - Call the stand function to set the initial position.
+      - Set up the pins for the ultrasonic sensor.
+
+3. In the loop function:
+      - Move the robot's head servo to three different positions (0, 90, and 180 degrees) and measure distances using the ultrasonic sensor.
+      - Store the distances in variables d1, d2, and d3.
+
+4. Check for obstacles:
+      - If all three distance readings are greater than 10 cm (indicating no obstacles in front of the robot): 
+        - Compare the distances to decide the direction to move.
+        - If d1 is the largest, perform a right turn (twice).
+        - If d2 is the largest, walk straight (twice).
+        - Otherwise, perform a left turn (twice).
+      - If any of the distance readings are less than or equal to 10 cm (indicating an obstacle in front of the robot):
+        - Call the stand function to stop the robot.
+
+5. The ultrasonic_read function:
+
+      - Triggers the ultrasonic sensor, measures the duration of the echo, and calculates the distance in centimeters.
+
+6. The stand function:
+      - Set all leg servos to a standard standing position.
+      - Set the head servo to its default position.
+
+7. The walk function:
+      - Move the leg servos to simulate a walking motion in the robot.
+      - Adjust the body and leg servos to create a walking gait.
+
+8. The left_turn and right_turn functions:
+      - Move the leg servos to simulate turning motions in the robot.
+      - Adjust the body and leg servos to create turning motions in the robot.
+
+This algorithm controls the robot's behavior by making it turn, walk, or stand based on the readings from the ultrasonic sensor.
+It also defines the initial positions for the servos in the stand function.
