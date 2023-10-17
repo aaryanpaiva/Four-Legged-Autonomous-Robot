@@ -1,1 +1,11 @@
+The robot is made using basic, easy to acquire parts.
+They are as listed below:
 
+  1. Ultrasonic Sensor x1
+  2. SPDUINO (ARDUINO UNO CLONE)
+  3. GAIT SHIELD (SERVO SHIELD)
+  4. POWER HD 1711MG SERVO MOTOR
+  5. POWER HD 1900A SERVO MOTOR x1
+  5. Lithium Ion Battery (2 Cell Li-ion)
+
+All the other parts are simply mechanical and wiring whcihc depends on personal preference.
